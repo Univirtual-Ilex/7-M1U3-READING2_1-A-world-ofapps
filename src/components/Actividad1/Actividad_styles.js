@@ -55,26 +55,46 @@ const mistyles = css`
     background-repeat: no-repeat;
     height: 30em;
     margin-top: 3em;    
+    transform: translateX(2.5em);
 }
 .a1{
-    margin-top:7em;
-    margin-left: 5em;
+    margin-top:6em;
+    margin-left: 4.5em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
 }
 .a2{
-    margin-top: 0.8em;
-    margin-left: 9em;
+    margin-top: -1em;
+    margin-left: 8.7em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
 }
 .a3{
-    margin-top: 2.5em;
-    margin-left: 6em;
+    margin-top: 1.5em;
+    margin-left: 5.5em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
 }
 .a4{
-    margin-top: 1em;
-    margin-left: 11em;
+    margin-top: -1.2em;
+    margin-left: 10em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
 }
 .a5{
-    margin-top: 2.5em;
-    margin-left: 8em;
+    margin-top: 1em;
+    margin-left: 7em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+p, h6{
+    font-family: ${Ilex.font};
+    font-size: ${Ilex.font_size};
 }
 
 `
