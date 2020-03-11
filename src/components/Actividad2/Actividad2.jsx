@@ -76,12 +76,10 @@ const Actividad2_base = ({staticContext, ...props}) => {
     })
     return (
         <Container bgImage='./src/bg_actividad1.png' h={46} w={80} {...props}>
-
             <UiButtonsContainer>
-                <ButtonUi icon='ilx-ayuda' tooltip='Drag the words to the appropriate box, plural, female or male.' />
+                <ButtonUi icon='ilx-ayuda' tooltip='From the previous activity responds' />
                 <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
-            </UiButtonsContainer>
-            
+            </UiButtonsContainer>           
             <IRow w={85} align="center">
                 <ICol pt={ 4 } pb={0.5}>
                     <MainTitle color={Ilex.violeta2} size={1.5}>
@@ -89,19 +87,13 @@ const Actividad2_base = ({staticContext, ...props}) => {
                     </MainTitle>  
                 </ICol>
             </IRow>
-
-            <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'} >
+            <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'} className="questions">
                 {questions}
             </IRow>
-
-
-            <IRow pt={7.7} >
-                <ICol  onClick={checkActivity} ><ButtonCheck /></ICol>
+             <IRow pt={7.7}>
+                <ICol  onClick={checkActivity} ><ButtonCheck className="check" /></ICol>
             </IRow>
             <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad2'} finished={passed} />
-
-
-
         </Container>
 
     )

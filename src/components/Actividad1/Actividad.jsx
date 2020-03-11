@@ -24,6 +24,7 @@ const Actividad_base = ({staticContext, ...props}) => {
     
     const [modalFlag, setModal] = useState(false)
     const [passed, setPassed] = useState(false)
+    const [visible, mostrarTooltip] = useState(false)
 
     const setChecked = (id, button) => {
         const data = Data[id]
@@ -62,20 +63,24 @@ const Actividad_base = ({staticContext, ...props}) => {
 
     const list = Data.map((data, i) => {
         return (
-            <IRow justify={'flex-start'} className="inline_list" pt={2} key={i}>
-                <div> <p> <strong> {i + 1}). </strong> {data.text} </p></div>
-                <ButtonRadio setCheckedState={setChecked} arrId={i} buttonId={0} nameb={'radio_button' + i} text={'TRUE'} />
-                <ButtonRadio setCheckedState={setChecked} arrId={i} buttonId={1} nameb={'radio_button' + i} text={'FALSE'} />
-                <ButtonRadio setCheckedState={setChecked} arrId={i} buttonId={2} nameb={'radio_button' + i} text={'N/M'} />
+            <IRow justify={'flex-start'} className="inline_list" pt={2} key={i} className="items">
+                <ICol w={50}>
+                    <div> <p>  {i + 1}). {data.text} </p></div>
+                </ICol>
+                <ICol w={50} px={2}>
+                    <ButtonRadio className="btn true" setCheckedState={setChecked} arrId={i} buttonId={0} nameb={'radio_button' + i} text={'TRUE'} />
+                    <ButtonRadio className="btn false" setCheckedState={setChecked} arrId={i} buttonId={1} nameb={'radio_button' + i} text={'FALSE'} />
+                    <ButtonRadio className="btn nm" setCheckedState={setChecked} arrId={i} buttonId={2} nameb={'radio_button' + i} text={'N/M'} />
+                </ICol>
             </IRow>
             )
     })
  
     return (
-        <Container bgImage='./src/bg_actividad1.png' {...props} id="area" h={40}>
+        <Container bgImage='./src/bg_actividad1.png' {...props} id="area" h={48}>
             
             <UiButtonsContainer>
-                <ButtonUi icon='ilx-ayuda' tooltip='click on the buttons to listen and read the activities, associate them with the texts below.' />
+                <ButtonUi icon='ilx-ayuda' tooltip='Click the icons to read the description of each app, then answer' />
                 <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
             </UiButtonsContainer>
             
@@ -85,17 +90,52 @@ const Actividad_base = ({staticContext, ...props}) => {
                     READ THE DESCRIPTIONS OF THE APPS AND INDICATE IF THE STATEMENTS ARE TRUE, FALSE OR NOT MENTIONED.
                 </MainTitle>
             </IRow>
+
             <IRow pt={1} >
-                <ICol w={45} >
-                    <img src='./src/apps.png' />
+                <ICol w={30} px={3} className="app" >
+                    <div className="a1">
+                        <Tooltip visible={visible} onClick={() => mostrarTooltip(!visible)}>
+                            <p>This app helps you organize your time. There are three main sections in the app. In the To-do list section, there are lists, tasks and reminders. In the Calendar section, you can plan your day, week and month. Finally, there is an assistant section. This assistant gives you recommendations for stores, restaurants or places so you can complete your activities. The app is free only for seven days, after that you need to pay some money. The app is available for android, and IOS. Also, if you prefer you can download it in your computer!
+                            </p>
+                        </Tooltip>
+                    </div>
+                    <div className="a2">
+                        <Tooltip visible={visible} onClick={() => mostrarTooltip(!visible)}>
+                            <p>
+                            With this app, you can edit your photos and make them look professional. The app costs one dollar with ninety-nine cents but there are many people who have it on their smartphones now. There are two main things that you can achieve: good symmetry and perfect lines. Users of the popular app Instagram love it. There aren’t many advanced features so it is easy to use. Iphone and Android users can get the app.
+                            </p>
+                        </Tooltip>
+                    </div>
+                    <div className="a3">
+                        <Tooltip visible={visible} onClick={() => mostrarTooltip(!visible)}>
+                            <p>
+                            This app focuses on your mental health through 
+meditation. When you first download the app there are three basic sections to explore. After you cover the basics, you can move to the other sections. There are seven categories: health, brave, happiness, work, students, headspace pro, and sport. In each category there is a list of guided meditation audios to listen. The app is free but you need to subscribe to have full access to all of the app’s features. It is available in both app and play store.
+                            </p>
+                        </Tooltip>
+                    </div>
+                    <div className="a4">
+                        <Tooltip visible={visible} onClick={() => mostrarTooltip(!visible)}>
+                            <p>
+                            This is the perfect app to have your finances in order. There are different things you can do with this app. You can create budgets and obtain recommendations, you can add your bills, get alerts and pay them through the app and also you can check your credit score. The app is free but there are only two countries where it is available: Canada and the United States. You can download the app from play store and app store. 
+                            </p>
+                        </Tooltip>
+                    </div>
+                    <div className="a5">
+                        <Tooltip visible={visible} onClick={() => mostrarTooltip(!visible)}>
+                            <p>
+                            This app is a music player for Android. The app is not free, but there is a trial of fifteen days. After the free period, you need to pay three dollars with ninety-nine cents. There isn’t a version for iPhone. There are many formats which are supported by the app, for example mp3, mp4/m4a, ogg, wma,wav, etc. There are other features that let you customize the sound of your music. Also there is one feature that makes it possible to add the songs’ lyrics. 
+                            </p>
+                        </Tooltip>
+                    </div>
                 </ICol>
 
-                <ICol w={45} >
+                <ICol w={70} px={5}>
                     {list}
                 </ICol>
             </IRow>
             <IRow pt={7.3} >
-                <ICol pt={1} onClick={checkActivity} ><ButtonCheck /></ICol>
+                <ICol pt={1} onClick={checkActivity} ><ButtonCheck className="check" /></ICol>
             </IRow>
             <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad1'} nxtUrl={'/actividad2'} />
         </Container>

@@ -8,6 +8,75 @@ const mistyles = css`
 .hide{
     display: none;
 }
+.btn {
+  top: 0;
+  margin-left: 0.1em;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  border-radius: 0.5em;
+  box-shadow: 0 0.05em 0 0 ${Ilex.color_gris_input};
+  border: solid 0.1em ${Ilex.color_gris_input};
+  width: auto;
+  padding: 0.5em;
+  font-weight: bold;
+  &.true{
+    background: ${Ilex.verde};
+    color: white;
+    &:hover{
+        background: #43BA98;
+    }
+  }
+  &.false{
+    background: ${Ilex.color_rosa_speaking};
+    color: white;
+    &:hover{
+        background: #933650;
+    }
+  }
+  &.nm{
+    background: ${Ilex.color_rosa_radios};
+    color: white;
+    &:hover{
+        background: #6A35B3;
+    }
+  }
+}
+.items{
+    margin-top: -1em;
+    font-family: ${Ilex.font};
+    color: ${Ilex.textos};
+}
+.check{
+    margin-top: -4em;
+}
+.app{
+    background-image: url(./src/apps.png);
+    background-repeat: no-repeat;
+    height: 30em;
+    margin-top: 3em;    
+}
+.a1{
+    margin-top:7em;
+    margin-left: 5em;
+}
+.a2{
+    margin-top: 0.8em;
+    margin-left: 9em;
+}
+.a3{
+    margin-top: 2.5em;
+    margin-left: 6em;
+}
+.a4{
+    margin-top: 1em;
+    margin-left: 11em;
+}
+.a5{
+    margin-top: 2.5em;
+    margin-left: 8em;
+}
+
 `
 
 export const DraggablesContainer = styled.div`

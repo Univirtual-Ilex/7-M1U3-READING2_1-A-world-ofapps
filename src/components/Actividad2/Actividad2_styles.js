@@ -43,12 +43,18 @@ const styles = css`
             }
         }
     }
-
-
     &.columns{
         height: 40em;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .questions{
+        color: ${Ilex.textos};
+        margin-top: 1em;
+        line-height: 1.2em;
+    }
+    .check{
+        margin-top: 1.25em;
     }
 `
 
