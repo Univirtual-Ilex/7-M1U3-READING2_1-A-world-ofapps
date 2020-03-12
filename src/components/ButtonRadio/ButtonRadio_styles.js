@@ -18,7 +18,9 @@ position: relative;
   cursor: pointer;
   position: absolute;
 }
-
+.checkmark{
+  text-align: center;
+}
 
 
 
@@ -28,7 +30,8 @@ position: relative;
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background: ${Ilex.rosa}
+  background: ${Ilex.color_amarilloClaro};
+  color: ${Ilex.rosa};
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

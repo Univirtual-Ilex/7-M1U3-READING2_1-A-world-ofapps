@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import styles from './Actividad2_styles'
 import Ilex from '../../App/variables'
-import ProgressBar from '../ProgressBar'
+
 // styles from styled
 import { UiButtonsContainer } from '../Actividad1/Actividad_styles'
 // Data
@@ -66,7 +66,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
 
     const questions = Data.map((data,i) => {
         return(
-            <ICol w={25} key={i} >
+            <ICol w={25} key={i} className="text">
                 <p > <strong >{i + 1}).</strong> {data.text}</p>
                 <ButtonRadioSimple setCheckedState={setChecked} arrId={i} buttonId={0} nameb={'first_button1' + i} text={data.button1.text} className={"ml-1  " + 'first_button1' + i} />
                 <ButtonRadioSimple setCheckedState={setChecked} arrId={i} buttonId={1} nameb={'first_button1' + i} text={data.button2.text} className={"ml-1  " + 'first_button1' + i} /> 
@@ -75,7 +75,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
         )
     })
     return (
-        <Container bgImage='./src/bg_actividad1.png' h={46} w={80} {...props}>
+        <Container bgImage='./src/bg_actividad1.png' h={55} w={80} {...props}>
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='From the previous activity responds' />
                 <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
@@ -87,7 +87,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
                     </MainTitle>  
                 </ICol>
             </IRow>
-            <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'} className="questions">
+            <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'}>
                 {questions}
             </IRow>
              <IRow pt={7.7}>

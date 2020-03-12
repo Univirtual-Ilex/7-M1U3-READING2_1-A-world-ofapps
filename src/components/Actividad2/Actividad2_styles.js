@@ -8,6 +8,7 @@ const styles = css`
         orphans:0;
         widows: 0;
         
+        
         li{
             margin: 0.5em 0.5em;
 
@@ -24,6 +25,7 @@ const styles = css`
         align-content:space-between;
         flex-wrap:wrap;
         height:25.4em;
+     
         li{
             margin: 0.5em 0.5em;
             width: 10em ;
@@ -36,6 +38,7 @@ const styles = css`
         padding: 1em;
         font-weight: lighter;
         text-align: justify;
+        
         .sub-contenedor-img{
             img {
                 max-width :100%;
@@ -44,18 +47,23 @@ const styles = css`
         }
     }
     &.columns{
-        height: 40em;
+        height: 30em;
         flex-direction: column;
         flex-wrap: wrap;
-    }
-    .questions{
         color: ${Ilex.textos};
-        margin-top: 1em;
-        line-height: 1.2em;
+        line-height: 1.5em;
     }
     .check{
-        margin-top: 1.25em;
+        margin-top: -2.8em;
     }
+    .text{
+        margin-right: 0.8em;
+
+    }
+    p{
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
 `
 
 export default styles

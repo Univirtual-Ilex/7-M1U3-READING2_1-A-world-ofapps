@@ -9,12 +9,13 @@ position: relative;
   cursor: pointer;
   height: auto;
   display: flex;
-    position: relative;
+  position: relative;
+
+
 
     input {
         opacity:0;
         position: absolute;
-  
     }
     .checkmark::before{
         content: '';
@@ -44,12 +45,11 @@ position: relative;
 .container input {
   cursor: pointer;
   position: absolute;
-  margin-top: 0.8em;
+  margin-top: 0.5em;
 
 }
 .checkmark {
-  top: 0;
-  line-height: 1.2em;
+  line-height: 1em;
   text-align: center;
   display: inline-block;
   width: auto;
@@ -57,8 +57,8 @@ position: relative;
 }
 .text{
   margin-left: 2em;
-  margin-bottom: 0.5em;
 }
+
 
 
 /* When the radio button is checked, add a blue background */

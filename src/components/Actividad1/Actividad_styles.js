@@ -12,8 +12,8 @@ const mistyles = css`
   top: 0;
   margin-left: 0.1em;
   line-height: 1;
-  text-align: center;
   display: inline-block;
+  
   border-radius: 0.5em;
   box-shadow: 0 0.05em 0 0 ${Ilex.color_gris_input};
   border: solid 0.1em ${Ilex.color_gris_input};
