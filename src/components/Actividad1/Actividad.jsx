@@ -83,7 +83,7 @@ const Actividad_base = ({staticContext, ...props}) => {
             
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='Click the icons to read the description of each app, then answer' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.reload()} } />
             </UiButtonsContainer>
             
           
@@ -143,7 +143,7 @@ const Actividad_base = ({staticContext, ...props}) => {
             <IRow pt={7.3} >
                 <ICol pt={1} onClick={checkActivity} ><ButtonCheck className="check" /></ICol>
             </IRow>
-            <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad1'} nxtUrl={'/actividad2'} />
+            <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'#/actividad1'} nxtUrl={'#/actividad2'} />
         </Container>
     )
 

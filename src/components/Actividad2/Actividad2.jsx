@@ -78,7 +78,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
         <Container bgImage='./src/bg_actividad1.png' h={55} w={80} {...props}>
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='From the previous activity responds' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.reload()} } />
             </UiButtonsContainer>           
             <IRow w={85} align="center">
                 <ICol pt={ 4 } pb={0.5}>
@@ -93,7 +93,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
              <IRow pt={7.7}>
                 <ICol  onClick={checkActivity} ><ButtonCheck className="check" /></ICol>
             </IRow>
-            <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad2'} finished={passed} />
+            <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'#/actividad2'} finished={passed} />
         </Container>
 
     )

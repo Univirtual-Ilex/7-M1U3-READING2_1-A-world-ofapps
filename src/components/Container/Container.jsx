@@ -11,7 +11,7 @@ import styled from 'styled-components'
 const Container_base = ({ h, w, bgImage, row,...props}) => { // se traen los props con el spread y además se desestructura para evitar problemas de render https://www.styled-components.com/docs/faqs#why-am-i-getting-html-attribute-warnings
     return (
         <section {...props}>
-            <div className={`viewport ${ row ? 'row': '' } ${ bgImage ? 'bgImage': ''}`}>
+            <div className={`viewport entrada-top-Y ${ row ? 'row': '' } ${ bgImage ? 'bgImage': ''}`}>
                 { props.children }
             </div>
         </section>
@@ -48,6 +48,13 @@ const Container = styled(Container_base)`
         background-position:right top;
         background-repeat:no-repeat;
         background-size: cover;
+    }
+
+    @media screen and (max-height: 1080px) {
+        align-items:start;
+        position:relative;
+        padding-top: 6em;
+        padding-bottom: 6em;
     }
 
 `
