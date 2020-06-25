@@ -89,7 +89,7 @@ const Actividad_base = ({staticContext, ...props}) => {
           
             <IRow pt={2}>
                 <MainTitle color={Ilex.violeta2}>
-                    READ THE DESCRIPTIONS OF THE APPS AND INDICATE IF THE STATEMENTS ARE TRUE, FALSE OR NOT MENTIONED.
+                    CLICK AND READ THE DESCRIPTIONS OF THE APPS AND INDICATE IF THE STATEMENTS ARE TRUE, FALSE OR NOT MENTIONED.
                 </MainTitle>
             </IRow>
 
@@ -97,7 +97,7 @@ const Actividad_base = ({staticContext, ...props}) => {
                 <ICol w={30} px={3} className="app" >
                     <div className="a1" onClick={() => mostrarTooltip(!visible)}>
                         <Tooltip visible={visible} >
-                            <h6>Any.do (sizw: Twenty-three MB)</h6>
+                            <h6>Any.do (size: Twenty-three MB)</h6>
                             <p>This app helps you organize your time. There are three main sections in the app. In the To-do list section, there are lists, tasks and reminders. In the Calendar section, you can plan your day, week and month. Finally, there is an assistant section. This assistant gives you recommendations for stores, restaurants or places so you can complete your activities. The app is free only for seven days, after that you need to pay some money. The app is available for android, and IOS. Also, if you prefer you can download it in your computer!
                             </p>
                         </Tooltip>
