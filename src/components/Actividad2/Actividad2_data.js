@@ -170,7 +170,7 @@ const data = [
       "right": 0,
       "button1": {
         "text": "Any.do.",
-        "score": 0
+        "score": 1
       },
       "button2": {
         "text": "Mint.",
@@ -178,7 +178,7 @@ const data = [
       },
       "button3": {
         "text" : "Headspace.",
-        "score" : 1
+        "score" : 0
       }
     },
   ]

@@ -27,11 +27,6 @@ const data = [
     },
     {
       "right": 0,
-      "answer": 'false',
-      "text": "There are videos with guided meditations in Headspace."
-    },
-    {
-      "right": 0,
       "answer": 'true',
       "text": "There is one app that is not available in Colombia."
     },
